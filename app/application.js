@@ -25,7 +25,37 @@ items: [{
   items: [{
     name: 'public-panel',
     title:'&nbsp;&nbsp;Statistical & Cadastral Data&nbsp;&nbsp;',
-    html: '<br />&nbsp;To be used for reporting incidents'
+    layout: 'border',
+    items: [{
+      xtype: 'panel', //view for reportLocations
+      layout: 'fit',
+      region: 'center'
+    },{
+      xtype: 'panel',
+      name: 'south-panel',
+      layout: 'border',
+      region: 'south',
+      minHeight: 200,
+      maxHeight:400,
+      collapsible: true,
+      split: true,
+      height: 250,
+      items: [{
+        xtype: 'panel', //neighborhoods view
+        width: 250,
+        region: 'west',
+        margins: 2
+      },{
+        xtype: 'panel', //ReportsList view
+        region: 'center',
+        padding: '2 0 2 0'
+      },{
+        xtype: 'panel', // Images view
+        width: 250,
+        region: 'east',
+        margins: 2
+      }]
+    }]
   }],
   border: false,
   tabBar: {
