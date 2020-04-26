@@ -1,0 +1,22 @@
+/* incident status icons */
+
+.repaired-icon{
+  background-image:url(../images/repaired.gif);
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
+
+.waiting-icon{
+  background-image:url(../images/waiting.gif);
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
+
+.inprogress-icon{
+  background-image:url(../images/inprogress.gif);
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
