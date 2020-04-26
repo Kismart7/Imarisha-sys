@@ -12,6 +12,9 @@ Ext.define('Imarisha-sys.view.ReportsLocation',{
       xtype: 'panel', //navigation map's panel
       id: 'navMapPanel',
       layout: 'fit',
+      listeners: {
+        afterlayout: this.checkNavMap
+      },
       padding: 5
     }],
 
@@ -29,6 +32,12 @@ Ext.define('Imarisha-sys.view.ReportsLocation',{
 
     this.callParent(arguments);
   },
+
+  //----------Controls the display of the navigation map
+  checkNavMap: function(evtPanel){
+    navigationController.displayNavigationMap(evtPanel);
+  },
+  //---------
 
   //Toggles the visilbility of the base layer
   toggleBaseLayer: function(item, pressed){
