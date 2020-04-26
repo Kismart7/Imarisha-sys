@@ -1,5 +1,6 @@
 // Requiring necessary modules
 Ext.require([
+  'Ext.data.reader.Json',
   'Ext.grid.*',
   'Ext.container.Viewport',
   'Ext.tab.Panel',
@@ -16,7 +17,7 @@ Ext.Loader.setConfig({
 Ext.application({
   name: 'Imarisha-sys',
   appFolder: 'app',
-  controllers: ['Reports'],
+  controllers: ['Reports', 'Navigation' ],
 
   launch: function() {
     Ext.create('Ext.container.Viewport', {//Viewport
@@ -29,7 +30,7 @@ items: [{
     title:'&nbsp;&nbsp;Statistical & Cadastral Data&nbsp;&nbsp;',
     layout: 'border',
     items: [{
-      xtype: 'panel', //view for reportLocations
+      xtype: 'reportslocation', //view for reportLocations
       layout: 'fit',
       region: 'center'
     },{
