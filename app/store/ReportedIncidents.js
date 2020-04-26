@@ -1,6 +1,6 @@
 //ReportedIncidents store
 Ext.define('Imarisha-sys.store.ReportedIncidents', {
-  extend: 'Ext.data.store',
+  extend: 'Ext.data.Store',
   model: 'Imarisha-sys.model.CitizenReport',
 
   proxy: {

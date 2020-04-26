@@ -1,5 +1,6 @@
 // Requiring necessary modules
 Ext.require([
+  'Ext.grid.*',
   'Ext.container.Viewport',
   'Ext.tab.Panel',
   'Ext.layout.container.Border'
@@ -15,6 +16,7 @@ Ext.Loader.setConfig({
 Ext.application({
   name: 'Imarisha-sys',
   appFolder: 'app',
+  controllers: ['Reports'],
 
   launch: function() {
     Ext.create('Ext.container.Viewport', {//Viewport
@@ -33,6 +35,7 @@ items: [{
     },{
       xtype: 'panel',
       name: 'south-panel',
+      title: 'Citizen&#39;s Reports',
       layout: 'border',
       region: 'south',
       minHeight: 200,
@@ -46,7 +49,7 @@ items: [{
         region: 'west',
         margins: 2
       },{
-        xtype: 'panel', //ReportsList view
+        xtype: 'reportslist', //ReportsList view
         region: 'center',
         padding: '2 0 2 0'
       },{
